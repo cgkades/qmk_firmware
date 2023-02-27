@@ -11,7 +11,7 @@
 #define MATRIX_COL_PINS { B4, E6, D7, C6, D4, D0 }
 
 /* COL2ROW or ROW2COL */
-#define DIODE_DIRECTION COL2ROW
+#define DIODE_DIRECTION ROW2COL
 
 /* number of backlight levels */
 #define BACKLIGHT_PIN B5
