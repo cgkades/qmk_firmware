@@ -153,7 +153,6 @@ bool led_update_user(led_t led_state) {
 
     if (led_state.caps_lock != caps_lock_state) {
         cmd_window_state.caps_lock_count++;
-
         if (cmd_window_state.caps_lock_count == 2) {
             cmd_window_state.led_cmd |= CAPS_LOCK_BITMASK;
             cmd_window_state.caps_lock_count = 0;

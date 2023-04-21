@@ -30,22 +30,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_Q,         KC_W,    KC_E,    KC_R,    KC_T,                                             KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,
         LCTL_T(KC_A),         KC_S,    KC_D,    KC_F,    KC_G,                                             KC_H,    KC_J,    KC_K,    KC_L,    KC_QUOTE,
         LSFT_T(KC_Z), KC_X,    KC_C,    KC_V,    KC_B,                                             KC_N,    KC_M,    KC_COMM, KC_DOT,  RSFT_T(KC_SLSH),
-                                                 KC_MUTE,                                          TG(_ADJ),
+                                                 KC_BTN1,                                          TG(_ADJ),
                                         KC_LGUI, KC_LALT, LT(_NUM,KC_BSPC),    LT(_SYMB,KC_SPACE), LT(_MUS,KC_ENT), KC_RCTL
     ),
     [_NUM] = LAYOUT(
         KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                         KC_6,    KC_7,    KC_8,    KC_9,    KC_0,
-        KC_TAB,  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT,                      XXXXXXX, KC_MINUS, KC_EQUAL,   KC_LBRC, KC_RBRC,
-        KC_LCTL, KC_GRV, XXXXXXX, KC_MUTE, XXXXXXX,                      KC_HOME, KC_END,  XXXXXXX, KC_BSLS, KC_SCLN,
+        KC_TAB,  KC_LEFT, KC_DOWN, KC_BTN1, KC_BTN2,                      XXXXXXX, KC_MINUS, KC_EQUAL,   KC_LBRC, KC_RBRC,
+        KC_LCTL, KC_GRV,  XXXXXXX, KC_MUTE, XXXXXXX,                      KC_HOME, KC_END,  XXXXXXX, KC_BSLS, KC_SCLN,
                                             XXXXXXX,                      KC_NO,
-                                   XXXXXXX, XXXXXXX, _______,    KC_ENT, _______,  KC_NO
+                                   XXXXXXX, XXXXXXX, _______,    KC_SPC, _______,  KC_DEL
     ),
     [_SYMB] = LAYOUT(
         LSFT(KC_1), LSFT(KC_2), LSFT(KC_3), LSFT(KC_4), LSFT(KC_5),       LSFT(KC_6), LSFT(KC_7), LSFT(KC_8), LSFT(KC_9), LSFT(KC_0),
         KC_ESC,  KC_DEL,  LCTL(KC_A),   XXXXXXX,   XXXXXXX,                   XXXXXXX, LSFT(KC_MINUS), LSFT(KC_EQUAL),   LSFT(KC_LBRC), LSFT(KC_RBRC),
-        KC_LSFT, LSFT(KC_GRV),   XXXXXXX,  XXXXXXX,  XXXXXXX,                       XXXXXXX, XXXXXXX, XXXXXXX, LSFT(KC_BSLS), LSFT(KC_SCLN),
+        KC_LSFT, LSFT(KC_GRV),  XXXXXXX,  XXXXXXX,  XXXXXXX,                       XXXXXXX, XXXXXXX, XXXXXXX, LSFT(KC_BSLS), LSFT(KC_SCLN),
                                             XXXXXXX,                      KC_NO,
-                                   XXXXXXX, XXXXXXX, _______,    _______, XXXXXXX, KC_NO
+                                   XXXXXXX, XXXXXXX, _______,    _______, XXXXXXX, KC_DEL
     ),
     [_MUS] = LAYOUT(
         KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                        KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,
@@ -151,7 +151,7 @@ static void render_logo(void) {
 }
 
 static void render_status(void) {
-    oled_write_P(PSTR("This is\n~~~~~~~~~\nDracu\nLad\n~~~~~~~~~\nv1.0\n~~~~~~~~~\n"), false);
+    oled_write_P(PSTR("DracuLad\n~~~~~~~~~\nv1.0\n~~~~~~~~~\n"), false);
     uint8_t n = get_current_wpm();
     char    wpm_counter[4];
     wpm_counter[3] = '\0';
@@ -178,7 +178,7 @@ static void render_status(void) {
             oled_write_P(PSTR("Adjust "), false);
             break;
         case _MUS:
-            oled_write_P(PSTR("Mouse  "), false);
+            oled_write_P(PSTR("Shift  "), false);
             break;
         default:
             oled_write_P(PSTR("Unkn "), false);
