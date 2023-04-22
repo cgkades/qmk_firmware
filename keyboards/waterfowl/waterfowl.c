@@ -23,15 +23,15 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
     }
     if (index == 0) { // Left roller
         if (clockwise) {
-            tap_code(KC_MS_WH_DOWN);
+            tap_code(KC_PGDN);
         } else {
-            tap_code(KC_MS_WH_UP);
+            tap_code(KC_PGUP);
         }
     } else if (index == 1) { // Left encoder
         if (clockwise) {
-            tap_code16(S(KC_TAB));
+            tap_code(KC_MS_WH_DOWN);
         } else {
-            tap_code(KC_TAB);
+            tap_code(KC_MS_WH_UP);
         }
     } else if (index == 2) { // Right roller
         if (clockwise) {
@@ -41,9 +41,9 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
         }
     } else if (index == 3) { // Right encoder
         if (clockwise) {
-            tap_code(KC_RIGHT);
+            tap_code16(S(KC_TAB));
         } else {
-            tap_code(KC_LEFT);
+            tap_code(KC_TAB);
         }
     }
 

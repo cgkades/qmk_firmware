@@ -43,7 +43,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
      KC_TAB, XXXXXXX, XXXXXXX, KC_BTN1, KC_BTN2,                               XXXXXXX, KC_MINUS, KC_EQUAL,   KC_LBRC, KC_RBRC,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-     KC_GRV, KC_EQL,  KC_PLUS, KC_LCBR, KC_RCBR,                                KC_LBRC, KC_RBRC, XXXXXXX, XXXXXXX, KC_COLN,
+     KC_GRV, KC_EQL,  KC_PLUS, KC_LCBR, KC_RCBR,                                KC_LBRC, KC_RBRC, XXXXXXX, XXXXXXX, KC_SCLN,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                  KC_1,  KC_LGUI, _______,  KC_SPC, KC_CAPS,                     KC_NUM,     KC_ENT,   MO(3), KC_RALT, KC_4
                                       //`--------------------------'  `--------------------------'
@@ -55,7 +55,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
        KC_ESC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                             XXXXXXX,  LSFT(KC_MINUS), LSFT(KC_EQUAL),   LSFT(KC_LBRC), LSFT(KC_RBRC),
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-       KC_TILD, KC_PLUS, XXXXXXX, XXXXXXX, XXXXXXX,                             KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_PIPE, 
+       KC_TILD, KC_PLUS, XXXXXXX, XXXXXXX, XXXXXXX,                             KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_COLN, 
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                         KC_1,  KC_LGUI,   MO(3),  KC_SPC, KC_CAPS,      KC_NUM, KC_ENT, _______, KC_RALT, KC_4
                                       //`--------------------------'  `--------------------------'
