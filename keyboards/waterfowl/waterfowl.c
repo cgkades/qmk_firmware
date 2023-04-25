@@ -72,14 +72,17 @@ bool oled_task_kb(void) {
            case 0:
                oled_write_P(PSTR("DEFAULT\n\n\n\n"), false);
                break;
+           case 4:
+               oled_write_P(PSTR("ADJUST\n\n\n\n"), false);
+               break;
            case 3:
-               oled_write_P(PSTR("FUNCTION\n\n\n\n"), false);
+               oled_write_P(PSTR("RAISE\n\n\n\n"), false);
                break;
            case 2:
-               oled_write_P(PSTR("SYMBOLS\n\n\n\n"), false);
+               oled_write_P(PSTR("LOWER\n"), false);
                break;
-           case 1:
-               oled_write_P(PSTR("NAVIGATIONAND\nNUMBERS\n"), false);
+            case 1:
+               oled_write_P(PSTR("GAMES\n"), false);
                break;
            default:
                oled_write_ln_P(PSTR("Undefined"), false);
